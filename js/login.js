@@ -32,7 +32,7 @@ const app = {
                     document.cookie = `demoToken=${token}; expires=${new Date(expired)};`;
 
                     // 成功登入後，帶入產品頁面
-                    window.location.replace("../product.html");  // 不會留下歷史紀錄
+                    window.location.replace("./product.html");  // 不會留下歷史紀錄
                     // window.location.href = "../product.html";
                 })
                 .catch((err) => {
@@ -59,8 +59,8 @@ createApp(app).mount('#app')
 // const checkButton = document.querySelector('.check-btn');
 
 // // API 相關變數
-const apiUrl = 'https://vue3-course-api.hexschool.io/v2/';
-const apiPath = 'yj-lin';
+// const apiUrl = 'https://vue3-course-api.hexschool.io/v2/';
+// const apiPath = 'yj-lin';
 
 
 // // 登入
