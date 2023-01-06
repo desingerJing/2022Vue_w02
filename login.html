@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div id="app">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <h1 class="h3 mb-3 font-weight-normal text-center">
+                    請先登入
+                </h1>
+                <div class="col-8">
+                    <!-- 透過 button submit 呼叫 methods 的 login() -->
+                    <form class="form-signin" @submit.prevent="login">
+                        <div class="form-floating mb-3">
+                            <!-- v-model 將值帶入 data() 的 user.username -->
+                            <input type="email" class="form-control" v-model="user.username" id="floatingInput"
+                                placeholder="name@example.com" required autofocus>
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <!-- v-model 將值帶入 data() 的 user.password -->
+                            <input type="password" class="form-control" v-model="user.password" id="floatingPassword"
+                                placeholder="Password" required>
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="btn btn-lg btn-primary w-100 mt-3" type="submit">
+                            登入
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="mt-5 mb-3 text-center">
+                &copy; 2023~∞ - 六角學院
+            </p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js" type="module"></script>  <!-- 記得要 module -->
+</body>
+</html>
